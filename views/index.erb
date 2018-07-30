@@ -1,4 +1,4 @@
-<form action="http://localhost:9394/responses" method="POST">
+<form action="<%= ENV["REMOTE_HOST"] || "http://localhost:9394" %>/responses" method="POST">
   <label>
     Name
     <input name="response[name]">
@@ -13,6 +13,6 @@
     <textarea name="response[comments]"></textarea>
   </label>
 
-  <input type="hidden" name="redirect_url" value="http://localhost:9393/thanks/:response_id">
+  <input type="hidden" name="redirect_url" value="<%= ENV["LOCAL_HOST"] || "http://localhost:9393" %>/thanks/:response_id">
   <input type="submit" value="Submit">
 </form>
