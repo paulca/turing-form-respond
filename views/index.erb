@@ -1,0 +1,18 @@
+<form action="http://localhost:9394/responses" method="POST">
+  <label>
+    Name
+    <input name="response[name]">
+  </label>
+  <label>
+    Email
+    <input name="response[email]">
+  </label>
+
+  <label>
+    Comments
+    <textarea name="response[comments]"></textarea>
+  </label>
+
+  <input type="hidden" name="redirect_url" value="http://localhost:9393/thanks/:response_id">
+  <input type="submit" value="Submit">
+</form>
