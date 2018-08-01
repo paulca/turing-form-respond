@@ -1,3 +1,10 @@
-Thanks <%= @thanks["name"] %> <<%= @thanks["email"] %>> for your comments.
+<div class="turing-widget">
+  <form>
 
-<blockquote><%= @thanks["comments"] %></blockquote>
+    Thanks <%= @thanks["name"] %> <<%= @thanks["email"] %>> for your comments.
+
+    <blockquote><%= @thanks["comments"] %></blockquote>
+
+    <p>Your ID is <%= params[:response_id] %></p>
+  </form>
+</div>
