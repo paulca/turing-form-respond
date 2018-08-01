@@ -1,20 +1,21 @@
-<form action="<%= ENV["REMOTE_HOST"] || "http://localhost:9394" %>/responses" method="POST">
-  <label>
-    Name
-    <input name="response[name]">
-  </label>
-  <label>
-    Email
-    <input name="response[email]">
-  </label>
+<div class="turing-widget">
+  <form action="<%= ENV["REMOTE_HOST"] || "http://localhost:9394" %>/responses" method="POST">
+    <h1>Turing Fest Widget</h1>
+    <label>
+      Name
+      <input name="response[name]">
+    </label>
+    <label>
+      Email
+      <input name="response[email]">
+    </label>
 
-  <label>
-    Comments
-    <textarea name="response[comments]"></textarea>
-  </label>
+    <label>
+      Comments
+      <textarea name="response[comments]"></textarea>
+    </label>
 
-  <input type="hidden" name="redirect_url" value="<%= ENV["LOCAL_HOST"] || "http://localhost:9393" %>/thanks/:response_id">
-  <input type="submit" value="Submit">
-</form>
-
-<img src="http://turing-counter.herokuapp.com/counter" height="50">
+    <input type="hidden" name="redirect_url" value="<%= ENV["LOCAL_HOST"] || "http://localhost:9393" %>/thanks/:response_id">
+    <input type="submit" value="Submit">
+  </form>
+</div>
