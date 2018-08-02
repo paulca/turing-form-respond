@@ -2,7 +2,7 @@ require "sinatra"
 require "http"
 
 def get_response_from_remote_host
-  @thanks = HTTP.get("#{ENV['REMOTE_HOST'] || 'http://localhost:9394'}/responses/#{params[:response_id]}").parse
+  @thanks = HTTP.get("#{ENV['REMOTE_HOST'] || 'http://localhost:7045'}/responses/#{params[:response_id]}").parse
 end
 
 def show_thankyou_page
